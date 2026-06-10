@@ -39,11 +39,11 @@
     default_layer {
       display-name = "Base";
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog L_KP                                                        &mo L_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none     &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp LCTRL &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo L_FN  &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo L_FN
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog L_KP                                                         &mo L_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                             &none     &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp LCTRL &kp A     &kp S    &kp D    &kp F      &kp G  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                             &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo L_FN  &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC  &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo L_FN
       >;
     };
 
@@ -51,11 +51,11 @@
     qwerty_custom_layer {
       display-name = "Qwerty Custom";
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog L_KP                                                        &mo L_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                            &none     &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp LCTRL &kp A     &kp S    &kp D    &kp F      &kp G  &none           &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                            &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo L_FN  &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp BSPC &kp DEL   &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo L_FN
+        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog L_KP                                                         &mo L_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
+        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                             &none     &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
+        &kp LCTRL &kp A     &kp S    &kp D    &kp F      &kp G  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
+        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                             &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
+        &mo L_FN  &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC  &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo L_FN
       >;
     };
 
@@ -87,11 +87,11 @@
     fn {
       display-name = "Fn";
       bindings = <
-        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog L_KP                                                                   &mo L_MOD &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-        &trans &trans &trans &trans &trans &trans &none                                                                       &none     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans &none                         &trans &trans &trans            &trans        &none     &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans &trans                                  &to L_BASE &to L_QWERTY_ORIG                         &trans &trans &trans &trans  &trans  &trans
-        &trans &trans &trans &trans &trans                  &trans &trans &to L_QWERTY_CUSTOM &trans            &trans &trans                  &trans &trans &trans  &trans  &trans
+        &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &tog L_KP                                                                     &mo L_MOD &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
+        &trans &trans &trans &trans &trans &trans &none                                                                         &none     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans &none                           &trans &trans &trans            &trans        &none     &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans &trans                                    &to L_BASE &to L_QWERTY_ORIG                         &trans &trans &trans &trans  &trans  &trans
+        &trans &trans &trans &trans &trans                  &trans &kp BSPC &to L_QWERTY_CUSTOM &trans            &trans &trans                  &trans &trans &trans  &trans  &trans
       >;
     };
 
