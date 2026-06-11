@@ -100,13 +100,25 @@
     // layer 5
     extra1 { 
       display-name = "Extra1";
-      status = "reserved";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                                &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans                                                                &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans            &trans &trans &trans &trans            &trans       &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans                           &trans &trans                                 &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                  &trans &trans &trans &trans            &trans &trans              &trans &trans &trans &trans &trans
+      >;
     };
 
     // layer 6
     extra2 { 
       display-name = "Extra2";
-      status = "reserved";
+      bindings = <
+        &trans &trans &trans &trans &trans &trans &trans                                                                &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans                                                                &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans &trans            &trans &trans &trans &trans            &trans       &trans &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans &trans                           &trans &trans                                 &trans &trans &trans &trans &trans &trans
+        &trans &trans &trans &trans &trans                  &trans &trans &trans &trans            &trans &trans              &trans &trans &trans &trans &trans
+      >;
     };
 
     // layer 7
