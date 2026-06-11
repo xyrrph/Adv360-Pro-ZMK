@@ -35,15 +35,16 @@
   keymap {
     compatible = "zmk,keymap";
 
-    // layer 0
+    // layer 0: Dvorak
+    // 現用しているキーマップとの違い: ESC ↔ \ (バックスラッシュ)
     default_layer {
       display-name = "Base";
       bindings = <
-        &kp EQUAL &kp N1    &kp N2   &kp N3   &kp N4     &kp N5 &tog L_KP                                                         &mo L_MOD &kp N6 &kp N7 &kp N8    &kp N9   &kp N0   &kp MINUS
-        &kp TAB   &kp Q     &kp W    &kp E    &kp R      &kp T  &none                                                             &none     &kp Y  &kp U  &kp I     &kp O    &kp P    &kp BSLH
-        &kp LCTRL &kp A     &kp S    &kp D    &kp F      &kp G  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp H  &kp J  &kp K     &kp L    &kp SEMI &kp SQT
-        &kp LSHFT &kp Z     &kp X    &kp C    &kp V      &kp B                             &kp HOME &kp PG_UP                               &kp N  &kp M  &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-        &mo L_FN  &kp GRAVE &kp ESC  &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC  &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN  &kp LBKT &kp RBKT &mo L_FN
+        &kp BSLH  &kp N1    &kp N2    &kp N3   &kp N4     &kp N5 &tog L_KP                                                         &mo L_MOD &kp N6 &kp N7 &kp N8   &kp N9   &kp N0   &kp EQUAL
+        &kp TAB   &kp SQT   &kp COMMA &kp DOT  &kp P      &kp Y  &none                                                             &none     &kp F  &kp G  &kp C    &kp R    &kp L    &kp FSLH
+        &kp LCTRL &kp A     &kp O     &kp E    &kp U      &kp I  &none            &kp LCTRL &kp LALT &kp LGUI  &kp RCTRL           &none     &kp D  &kp H  &kp T    &kp N    &kp S    &kp MINUS
+        &kp LSHFT &kp SEMI  &kp Q     &kp J    &kp K      &kp X                             &kp HOME &kp PG_UP                               &kp B  &kp M  &kp W    &kp V    &kp Z    &kp RSHFT
+        &mo L_FN  &kp GRAVE &kp ESC   &kp LEFT &kp RIGHT                &kp SPACE &kp BSPC  &kp END  &kp PG_DN &kp ENTER &kp SPACE                  &kp UP &kp DOWN &kp LBKT &kp RBKT &mo L_FN
       >;
     };
 
