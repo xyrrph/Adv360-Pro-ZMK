@@ -93,7 +93,7 @@
         &trans &trans &trans &trans &trans &trans &none                                                                         &none     &trans &trans &kp PSCRN &kp UP   &trans      &kp INS
         &trans &trans &trans &trans &trans &trans &none                           &trans &trans &trans            &trans        &none     &trans &trans &kp LEFT  &kp DOWN &kp RIGHT   &trans
         &trans &trans &trans &trans &trans &trans                                    &to L_BASE &to L_QWERTY_ORIG                         &trans &trans &trans    &kp HOME &kp PG_UP   &trans
-        &trans &trans &trans &trans &trans                  &trans &kp BSPC &to L_QWERTY_CUSTOM &trans            &trans &trans                  &trans &trans    &kp END  &kp PG_DN &trans
+        &trans &trans &trans &trans &trans                  &trans &kp DEL  &to L_QWERTY_CUSTOM &trans            &trans &trans                  &trans &trans    &kp END  &kp PG_DN &trans
       >;
     };
 
