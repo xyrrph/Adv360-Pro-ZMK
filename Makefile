@@ -9,7 +9,12 @@ SELINUX1 := :z
 SELINUX2 := ,z
 endif
 
+.PHONY: default all-legacy left-legacy
 .PHONY: all left clean_firmware clean_image clean
+
+default: all-legacy
+
+# Clique版
 
 all:
 	$(shell bin/get_version_local.sh clique >> /dev/null)
@@ -32,6 +37,34 @@ left:
 		-e TIMESTAMP=$(TIMESTAMP) \
 		-e COMMIT=$(COMMIT) \
 		-e BUILD_RIGHT=false \
+		zmk
+	git checkout config/version.dtsi
+
+# legacy版
+
+all-legacy:
+	$(shell bin/get_version_local.sh legacy >> /dev/null)
+	$(DOCKER) build --tag zmk --file Dockerfile .
+	$(DOCKER) run --rm -it --name zmk \
+		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
+		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
+		-e TIMESTAMP=$(TIMESTAMP) \
+		-e COMMIT=$(COMMIT) \
+		-e BUILD_RIGHT=true \
+		-e BUILD_TYPE=legacy \
+		zmk 
+	git checkout config/version.dtsi
+
+left-legacy:
+	$(shell bin/get_version_local.sh legacy >> /dev/null)
+	$(DOCKER) build --tag zmk --file Dockerfile .
+	$(DOCKER) run --rm -it --name zmk \
+		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
+		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
+		-e TIMESTAMP=$(TIMESTAMP) \
+		-e COMMIT=$(COMMIT) \
+		-e BUILD_RIGHT=false \
+		-e BUILD_TYPE=legacy \
 		zmk
 	git checkout config/version.dtsi
 

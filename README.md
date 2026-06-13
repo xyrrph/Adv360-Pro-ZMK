@@ -63,6 +63,14 @@ sudo apt-get install docker make
 1. Execute `make` to build firmware for both halves or `make left` to only build firmware for the left hand side.
 2. Check the `firmware` directory for the latest firmware build. The first part of the filename is the timestamp when the firmware was built.
 
+### legacy版 (非Clique版) のビルド
+
+GitHub Actions では clique 版と no-clique 版の両方がビルドされる。
+これを参考に、ローカルでも no-clique 版をビルドできるようにしている。
+
+- Clique版のビルド: `make all`
+- 非Clique版のビルド: `make all-legacy` または `make`
+
 ### Cleanup
 
 The built docker container and compiled firmware files can be deleted with `make clean`. This might be necessary if you updated your fork from V2.0 to V3.0 and are encountering build failures.
