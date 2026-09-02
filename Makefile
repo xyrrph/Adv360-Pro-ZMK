@@ -18,8 +18,8 @@ default: all-legacy
 
 all:
 	$(shell bin/get_version_local.sh clique >> /dev/null)
-	$(DOCKER) build --tag zmk --file Dockerfile .
-	$(DOCKER) run --rm -it --name zmk \
+	"$(DOCKER)" build --tag zmk --file Dockerfile .
+	"$(DOCKER)" run --rm -i --name zmk \
 		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
 		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
 		-e TIMESTAMP=$(TIMESTAMP) \
@@ -30,8 +30,8 @@ all:
 
 left:
 	$(shell bin/get_version_local.sh clique >> /dev/null)
-	$(DOCKER) build --tag zmk --file Dockerfile .
-	$(DOCKER) run --rm -it --name zmk \
+	"$(DOCKER)" build --tag zmk --file Dockerfile .
+	"$(DOCKER)" run --rm -i --name zmk \
 		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
 		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
 		-e TIMESTAMP=$(TIMESTAMP) \
@@ -44,21 +44,21 @@ left:
 
 all-legacy:
 	$(shell bin/get_version_local.sh legacy >> /dev/null)
-	$(DOCKER) build --tag zmk --file Dockerfile .
-	$(DOCKER) run --rm -it --name zmk \
+	"$(DOCKER)" build --tag zmk --file Dockerfile .
+	"$(DOCKER)" run --rm -i --name zmk \
 		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
 		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
 		-e TIMESTAMP=$(TIMESTAMP) \
 		-e COMMIT=$(COMMIT) \
 		-e BUILD_RIGHT=true \
 		-e BUILD_TYPE=legacy \
-		zmk 
+		zmk
 	git checkout config/version.dtsi
 
 left-legacy:
 	$(shell bin/get_version_local.sh legacy >> /dev/null)
-	$(DOCKER) build --tag zmk --file Dockerfile .
-	$(DOCKER) run --rm -it --name zmk \
+	"$(DOCKER)" build --tag zmk --file Dockerfile .
+	"$(DOCKER)" run --rm -i --name zmk \
 		-v "$(PWD)/firmware:/app/firmware$(SELINUX1)" \
 		-v "$(PWD)/config:/app/config:ro$(SELINUX2)" \
 		-e TIMESTAMP=$(TIMESTAMP) \
@@ -72,6 +72,6 @@ clean_firmware:
 	rm -f firmware/*.uf2
 
 clean_image:
-	$(DOCKER) image rm zmk docker.io/zmkfirmware/zmk-build-arm:stable
+	"$(DOCKER)" image rm zmk docker.io/zmkfirmware/zmk-build-arm:stable
 
 clean: clean_firmware clean_image
